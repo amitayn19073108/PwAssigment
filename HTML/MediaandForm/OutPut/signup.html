@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+</head>
+<body>
+
+    <form>
+        <fieldset>
+    
+        <label for="firstName">First Name:
+    
+            <input type="text" name="firstName" placeholder="John" id="firstName" required="" minlength="3" max="20">
+    
+        </label>
+    
+        <br>
+    
+        <label for="lastName">Last Name:
+    
+            <input type="text" name="lastName" placeholder="root" id="lastName" required="" min="3" max="20">
+    
+        </label>
+    
+        <br>
+    
+        <label for="email">Email:
+    
+            <input type="email" name="email" placeholder="john@root.com" id="email" required="">
+    
+        </label>
+    
+        <br>
+    
+        <label for="password">Password:
+    
+            <input type="password" name="password" placeholder="********" id="password" required="" min="8">
+    
+        </label>
+    
+        <br>
+    
+        <label for="confirmPassword">Confirm Password:
+    
+            <input type="password" name="confirmPassword" placeholder="********" id="confirmPassword" required="">
+    
+        </label>
+    
+        <br>
+    
+        <label for="age">Age:
+    
+            <input type="number" name="age" placeholder="18" id="age" required="" min="0" max="100">
+    
+        </label>
+        <br>
+       
+        <label for="">Gender:
+    
+            <input type="radio" id="male" value="male" name="gender" checked="">
+    
+            <label for="male">Male</label>
+    
+            <input type="radio" id="female" value="female" name="gender">
+    
+            <label for="female">Female</label>
+    
+            <input type="radio" id="other" value="other" name="gender">
+    
+            <label for="other">Other</label>
+    
+        </label>
+    
+        <br>
+    
+        <label for="terms">terms:
+    
+            <input type="checkbox" id="terms" required=""> I agree to terms and conditions
+    
+        </label>
+    
+        <br>
+    
+        <button type="submit">Register</button>
+        </fieldset>
+    
+    </form>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
